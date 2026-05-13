@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # STRAK - Premium Random Video Chat Platform
 
 A modern, real-time random video chat application built with cutting-edge technologies. Connect with strangers worldwide with advanced gender filtering, premium features, and intelligent matching.
@@ -257,3 +258,6 @@ This project is licensed under the ISC License - see the LICENSE file for detail
 ---
 
 **Made with ❤️ for connecting people worldwide**
+=======
+# STRAK-OMEGLE
+>>>>>>> 20a95af75f8caabcbb4d02d6aabecce5dccf19c4
