@@ -115,7 +115,7 @@ strak-omegle/
 
 #### Backend (.env)
 ```env
-MONGODB_URI=mongodb://localhost:27017/strak
+MONGO_URI=mongodb://localhost:27017/strak
 JWT_SECRET=your-super-secret-jwt-key
 ADMIN_KEY=your-admin-promotion-key
 CLIENT_URL=http://localhost:3000
