@@ -8,6 +8,8 @@ interface User {
   email: string;
   gender: string;
   premium: boolean;
+  interests?: string[];
+  bio?: string;
 }
 
 interface AuthState {

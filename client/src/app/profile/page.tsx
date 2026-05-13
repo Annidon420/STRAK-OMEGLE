@@ -60,7 +60,8 @@ export default function ProfilePage() {
 
       const res = await API.put("/auth/profile", dataToSend);
 
-      setAuth(res.data.user, null); // Update user without changing token
+      // Keep the existing token in the store; backend response may not include it
+      setAuth(res.data.user, ""); // token not returned by backend
 
       toast.success("Profile updated successfully!");
       router.push("/dashboard");
