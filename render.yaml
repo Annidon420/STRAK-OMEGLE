@@ -8,8 +8,9 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
+      # Must be the backend host + /api
       - key: NEXT_PUBLIC_API_URL
-        value: https://your-backend-url.onrender.com
+        value: https://YOUR-RENDER-BACKEND-URL.onrender.com/api
     routes:
       - path: /
         destination: http://localhost:3000
@@ -26,7 +27,7 @@ services:
       - key: PORT
         value: 5000
       - key: CLIENT_URL
-        value: https://your-frontend-url.onrender.com
+        value: https://YOUR-RENDER-FRONTEND-URL.onrender.com
       - key: MONGO_URI
         fromDatabase:
           name: your-mongodb
@@ -34,3 +35,4 @@ services:
         sync: false
       - key: ADMIN_KEY
         sync: false
+
