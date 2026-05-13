@@ -1,0 +1,36 @@
+services:
+  # Frontend Service
+  - type: web
+    name: strak-frontend
+    runtime: node
+    buildCommand: cd client && npm install && npm run build
+    startCommand: cd client && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_API_URL
+        value: https://your-backend-url.onrender.com
+    routes:
+      - path: /
+        destination: http://localhost:3000
+
+  # Backend Service
+  - type: web
+    name: strak-backend
+    runtime: node
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: CLIENT_URL
+        value: https://your-frontend-url.onrender.com
+      - key: MONGO_URI
+        fromDatabase:
+          name: your-mongodb
+      - key: JWT_SECRET
+        sync: false
+      - key: ADMIN_KEY
+        sync: false
